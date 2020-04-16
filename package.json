@@ -1,0 +1,31 @@
+{
+    "name": "event-booking",
+    "version": "1.0.0",
+    "description": "",
+    "main": "app.js",
+    "scripts": {
+        "test": "nodemon app.js",
+        "start": "node app.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/aminhavasi/event-booking.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/aminhavasi/event-booking/issues"
+    },
+    "homepage": "https://github.com/aminhavasi/event-booking#readme",
+    "dependencies": {
+        "body-parser": "^1.19.0",
+        "dotenv": "^8.2.0",
+        "express": "^4.17.1",
+        "lodash": "^4.17.15",
+        "mongoose": "^5.9.9"
+    },
+    "devDependencies": {
+        "nodemon": "^2.0.3"
+    }
+}
