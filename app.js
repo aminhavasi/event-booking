@@ -27,6 +27,7 @@ app.use(
             price:Float!
             date:String!
         }
+        
 
         type RootQuery{
             events:[Event!]!
@@ -53,7 +54,17 @@ app.use(
         `),
         rootValue: {
             events: () => {
-                return events;
+                return Event.find({})
+                    .then((events) => {
+                        // return events.map((e) => {
+                        //     return { ...e._doc };
+                        // });
+                        return events;
+                    })
+                    .catch((err) => {
+                        console.log(err);
+                        throw err;
+                    });
             },
             createEvent: (args) => {
                 const event = new Event({
