@@ -6,7 +6,7 @@ const { buildSchema } = require('graphql');
 const mongoose = require('mongoose');
 const Event = require('./src/models/events');
 const app = express();
-const events = [];
+
 app.use(bodyParser.json());
 mongoose.connect(process.env.URI, {
     useCreateIndex: true,
