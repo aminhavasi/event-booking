@@ -18,6 +18,7 @@ mongoose.connect(process.env.URI, {
 app.use(
     '/graphql',
     graphQlHTTp({
+        graphiql: true,
         schema: buildSchema(`
 
         type Event{
